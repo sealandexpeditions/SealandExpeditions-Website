@@ -128,7 +128,7 @@ details[open] .chev { transform: rotate(180deg); }
     <a href="tours.html" class="mt-6 inline-block bg-leaf px-6 py-3 text-sm font-semibold tracking-wide text-white uppercase hover:bg-jungle">Get started</a>
   </div>
   <div class="aspect-video w-full overflow-hidden bg-black">
-    <iframe class="h-full w-full" src="https://www.youtube.com/embed/3EgAK-fd318" title="Belize video from the Travel Belize YouTube channel" loading="lazy" allowfullscreen></iframe>
+    <iframe id="belize-video" class="h-full w-full" src="https://www.youtube.com/embed/3EgAK-fd318?enablejsapi=1&mute=1&playsinline=1&rel=0" title="Belize video from the Travel Belize YouTube channel" allow="autoplay; encrypted-media; picture-in-picture; fullscreen" allowfullscreen></iframe>
   </div>
 </section>
 
@@ -235,6 +235,27 @@ details[open] .chev { transform: rotate(180deg); }
     var open = menu.classList.toggle('hidden') === false;
     btn.setAttribute('aria-expanded', open);
   });
+</script>
+<script>
+  // Plays the Belize video (muted) when it scrolls into view and pauses it when it leaves.
+  // Visitors can unmute with the player's volume button.
+  (function () {
+    var frame = document.getElementById('belize-video');
+    if (!frame) return;
+    var player, ready = false, visible = false;
+    var reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    function sync() {
+      if (!ready || reduceMotion) return;
+      if (visible) { player.playVideo(); } else { player.pauseVideo(); }
+    }
+    window.onYouTubeIframeAPIReady = function () {
+      player = new YT.Player('belize-video', { events: { onReady: function (e) { e.target.mute(); ready = true; sync(); } } });
+    };
+    var api = document.createElement('script');
+    api.src = 'https://www.youtube.com/iframe_api';
+    document.head.appendChild(api);
+    new IntersectionObserver(function (entries) { visible = entries[0].isIntersecting; sync(); }, { threshold: 0.5 }).observe(frame.parentElement);
+  })();
 </script>
 </body>
 </html>
