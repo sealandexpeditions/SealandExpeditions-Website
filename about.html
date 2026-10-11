@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>About – SeaLand Expeditions</title>
+<meta name="description" content="SeaLand Expeditions is a proudly Belizean-owned tour company in Belmopan, Cayo District, focused on safety, fun and discovery.">
+<link rel="icon" href="https://sealandexpeditions.com/wp-content/uploads/2023/11/sealand-expeditions-logo-300x300.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;600;700&family=Source+Serif+4:wght@400;600;700&display=swap" rel="stylesheet">
+<!-- Tailwind CSS. Keep this exact URL: a shortened version breaks the whole site. -->
+<script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+<style type="text/tailwindcss">
+@theme {
+  --color-jungle: #123524;
+  --color-jungle-deep: #0b2217;
+  --color-leaf: #558f58;
+  --color-leaf-light: #6aaa60;
+  --color-river: #0b8fd6;
+  --color-river-dark: #0873ae;
+  --font-serif: "Source Serif 4", Georgia, serif;
+  --font-sans: "Source Sans 3", system-ui, -apple-system, "Segoe UI", sans-serif;
+}
+html { scroll-behavior: smooth; }
+.angle-bottom { clip-path: polygon(0 0, 100% 0, 100% calc(100% - 3rem), 70% 100%, 45% calc(100% - 2rem), 20% calc(100% - 1rem), 0 calc(100% - 2.5rem)); }
+@media (min-width: 768px) { .angle-bottom { clip-path: polygon(0 0, 100% 0, 100% calc(100% - 4.5rem), 78% 100%, 52% calc(100% - 3rem), 26% calc(100% - 1.5rem), 0 calc(100% - 3.5rem)); } }
+details > summary { list-style: none; }
+details > summary::-webkit-details-marker { display: none; }
+details[open] .chev { transform: rotate(180deg); }
+.form-status[data-state="ok"] { color: #1d6b32; }
+.form-status[data-state="error"] { color: #b42318; }
+</style>
+</head>
+<body class="bg-white font-sans text-stone-600 antialiased">
+
+<!-- Top bar -->
+<div class="bg-jungle-deep text-sm text-white/90">
+  <div class="mx-auto flex max-w-6xl flex-wrap items-center justify-between gap-x-6 gap-y-1 px-5 py-2">
+    <div class="flex flex-wrap gap-x-6 gap-y-1">
+      <a href="mailto:sealandexpeditions@gmail.com" class="hover:text-leaf-light">sealandexpeditions@gmail.com</a>
+      <a href="tel:+5016714571" class="hover:text-leaf-light">+501-671-4571</a>
+    </div>
+    <a href="https://www.instagram.com/sealandexpeditions" class="hover:text-leaf-light">Instagram</a>
+  </div>
+</div>
+<!-- Navigation -->
+<header class="bg-jungle">
+  <div class="mx-auto flex max-w-6xl items-center justify-between px-5 py-3">
+    <a href="index.html" aria-label="SeaLand Expeditions home"><img src="https://sealandexpeditions.com/wp-content/uploads/2023/11/sealand-expedition_logo-2x.png" alt="SeaLand Expeditions" class="h-14 w-auto"></a>
+    <nav class="hidden items-center gap-1 lg:flex" aria-label="Main">
+      <a href="index.html" class="px-3 py-2 text-sm tracking-wide uppercase text-white hover:text-leaf-light">Home</a><a href="about.html" class="px-3 py-2 text-sm tracking-wide uppercase text-leaf-light">About</a><a href="tours.html" class="px-3 py-2 text-sm tracking-wide uppercase text-white hover:text-leaf-light">Tours</a><a href="gallery.html" class="px-3 py-2 text-sm tracking-wide uppercase text-white hover:text-leaf-light">Gallery</a><a href="booking.html" class="px-3 py-2 text-sm tracking-wide uppercase text-white hover:text-leaf-light">Booking</a><a href="faq.html" class="px-3 py-2 text-sm tracking-wide uppercase text-white hover:text-leaf-light">FAQ</a><a href="contact.html" class="px-3 py-2 text-sm tracking-wide uppercase text-white hover:text-leaf-light">Contact</a>
+      <a href="booking.html" class="ml-3 border border-white px-5 py-2 text-sm tracking-wide text-white uppercase hover:bg-white hover:text-jungle">Book now</a>
+    </nav>
+    <button id="menu-btn" class="border border-white/60 px-3 py-2 text-white lg:hidden" aria-expanded="false" aria-controls="mobile-menu">Menu</button>
+  </div>
+  <nav id="mobile-menu" class="hidden lg:hidden" aria-label="Mobile">
+    <a href="index.html" class="block px-5 py-3 border-t border-white/10 text-white">Home</a><a href="about.html" class="block px-5 py-3 border-t border-white/10 text-leaf-light">About</a><a href="tours.html" class="block px-5 py-3 border-t border-white/10 text-white">Tours</a><a href="gallery.html" class="block px-5 py-3 border-t border-white/10 text-white">Gallery</a><a href="booking.html" class="block px-5 py-3 border-t border-white/10 text-white">Booking</a><a href="faq.html" class="block px-5 py-3 border-t border-white/10 text-white">FAQ</a><a href="contact.html" class="block px-5 py-3 border-t border-white/10 text-white">Contact</a>
+    <a href="booking.html" class="block bg-river px-5 py-3 text-center font-semibold tracking-wide text-white uppercase">Book now</a>
+  </nav>
+</header>
+
+<section class="angle-bottom bg-jungle pt-14 pb-24 text-white md:pt-20 md:pb-32">
+  <div class="mx-auto max-w-6xl px-5">
+    <h1 class="font-serif text-4xl font-semibold md:text-6xl">About Us</h1>
+    
+  </div>
+</section>
+
+<section class="mx-auto grid max-w-6xl items-start gap-12 px-5 py-14 md:grid-cols-2 md:py-20">
+  <img src="https://sealandexpeditions.com/wp-content/uploads/2023/11/tour-collage2.png" alt="Collage of SeaLand Expeditions tours" loading="lazy" class="w-full">
+  <div class="space-y-4 leading-relaxed">
+    <p class="font-serif font-semibold text-leaf">About SeaLand Expeditions</p>
+    <h2 class="font-serif text-4xl font-semibold text-stone-900">We Are Dedicated to Giving You the Best Experience</h2>
+    <p>Sealand Expeditions, a proudly Belizean-owned company nestled in the heart of Belmopan, Cayo District, stands as a beacon of exceptional adventure, inviting you to embark on a journey where safety, fun, and discovery converge. With a passion for showcasing the rich cultural and natural tapestry of Belize, our mission is to curate immersive experiences that resonate with the spirit of this enchanting country.</p>
+    <p>At SeaLand Expeditions, we specialize in crafting meticulously planned tours to some of Belize's most iconic destinations. Whether you're drawn to the ancient allure of Mayan temples, the thrilling exploration of cave tubing, the diverse wonders of the Belize Zoo, the adrenaline-pumping excitement of ziplining, or the serene beauty of river tubing, our diverse array of offerings ensures there's something for every adventurer.</p>
+    <a href="tours.html" class="inline-block bg-leaf px-6 py-3 text-sm font-semibold tracking-wide text-white uppercase hover:bg-jungle">Get started</a>
+  </div>
+</section>
+
+<section class="bg-stone-50 py-14 md:py-20">
+  <div class="mx-auto grid max-w-6xl items-center gap-12 px-5 md:grid-cols-2">
+    <div class="space-y-4 leading-relaxed">
+      <p>Our commitment to safety is unwavering. Each tour is meticulously designed to provide not only a thrilling experience but also a secure environment for our valued guests. Our highly trained tour guides, well-versed in the nuances of each destination, are not just experts but passionate storytellers eager to share the tales of Belize's history, culture, and natural wonders.</p>
+      <p>Sealand Expeditions takes pride in offering seamless experiences, going beyond the adventure itself. We understand that your journey begins from the moment you decide to explore Belize, and thus, we provide convenient transfer services to and from your accommodations. Your comfort and peace of mind are paramount to us.</p>
+      <p>As a Belizean-owned company, we are deeply rooted in the local community, contributing to the sustainable development of tourism in the region. We believe in preserving the beauty that makes Belize unique for generations to come, and our practices reflect this commitment to environmental responsibility.</p>
+    </div>
+    <img src="https://sealandexpeditions.com/wp-content/uploads/2023/11/images_river-cave.jpg" alt="A river flowing out of a cave in Belize" loading="lazy" class="w-full">
+  </div>
+</section>
+
+<section class="mx-auto max-w-3xl px-5 py-14 text-center md:py-20">
+  <h2 class="font-serif text-4xl font-semibold text-stone-900">Why Choose Us</h2>
+  <p class="mt-5 leading-relaxed">Choose Sealand Expeditions for an immersive voyage through Belize, where every moment is an opportunity for discovery, every landscape a canvas of natural artistry, and every adventure a memory etched in the tapestry of your travels.</p>
+  <p class="mt-4 leading-relaxed">Join us as we redefine the boundaries of exploration and create experiences that linger in your heart long after your journey with Sealand Expeditions concludes.</p>
+  <a href="tours.html" class="mt-7 inline-block bg-leaf px-6 py-3 text-sm font-semibold tracking-wide text-white uppercase hover:bg-jungle">Get started</a>
+</section>
+
+<section class="bg-stone-50 py-14 md:py-20">
+  <div class="mx-auto max-w-6xl px-5">
+    <h2 class="text-center font-serif text-4xl font-semibold text-stone-900">Tour Guides</h2>
+    <div class="mt-10 grid gap-10 md:grid-cols-2">
+      <article class="bg-white shadow-sm">
+        <img src="https://sealandexpeditions.com/wp-content/uploads/2023/11/tour-guides_luis.jpg" alt="Luis Fernando Castillo, tour guide" loading="lazy" class="aspect-[4/3] w-full object-cover object-top">
+        <div class="p-7">
+          <h3 class="font-serif text-2xl font-semibold text-stone-900">Luis Fernando Castillo</h3>
+          <p class="text-sm font-semibold tracking-wide text-leaf uppercase">Tour Guide</p>
+          <p class="mt-4 leading-relaxed">&ldquo;I am a dedicated and enthusiastic tour guide hailing from Belmopan, Belize. With a passion for showcasing the natural wonders and cultural richness of my home Belize, I bring to life the captivating stories and breathtaking landscapes that define Belize. My knowledge of the local history, flora, and fauna enriches the travel experience for those whom explore Belize with me. My commitment to providing an authentic and memorable journey ensures that every tour is not just a visit, but an immersive and unforgettable adventure through the heart of Belize.&rdquo;</p>
+        </div>
+      </article>
+      <article class="bg-white shadow-sm">
+        <img src="https://sealandexpeditions.com/wp-content/uploads/2023/11/tour-guides_samgar.jpg" alt="Samgar Chavin, tour guide" loading="lazy" class="aspect-[4/3] w-full object-cover object-top">
+        <div class="p-7">
+          <h3 class="font-serif text-2xl font-semibold text-stone-900">Samgar Chavin</h3>
+          <p class="text-sm font-semibold tracking-wide text-leaf uppercase">Tour Guide</p>
+          <p class="mt-4 leading-relaxed">Samgar Chavin (Sam), the adventurous tour guide from Belmopan, Belize, is a master at curating thrilling experiences for enthusiasts seeking the perfect blend of nature and adrenaline. Embark on a journey with Sam exploring the depths of mystical caves, where ancient secrets intertwine with the echoes of adventurous spirits. Ziplining through the lush canopy provides an exhilarating perspective of Belize's vibrant landscapes, while scuba diving ventures beneath the crystal-clear waters to unveil the mesmerizing marine life of the Caribbean. For those with a historical penchant, Sam skillfully guides his guests through the awe-inspiring Mayan temples, unlocking the mysteries of this ancient civilization. Each adventure with Sam is a dynamic tapestry of excitement, education, and the unparalleled beauty that Belize offers.</p>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="bg-leaf py-14"><div class="mx-auto grid max-w-6xl grid-cols-2 gap-4 px-5 lg:grid-cols-4">
+    <a href="tours.html" class="group relative block aspect-[3/4] overflow-hidden bg-jungle">
+      <img src="https://sealandexpeditions.com/wp-content/uploads/2023/11/tours-tubing.jpg" alt="" loading="lazy" class="h-full w-full object-cover opacity-70 transition group-hover:scale-105 group-hover:opacity-80">
+      <div class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/70 to-transparent p-5 text-center text-white">
+        <h3 class="font-serif text-2xl font-semibold">Our Tours</h3>
+        <span class="mt-2 inline-block text-sm tracking-wide uppercase underline">View now</span>
+      </div>
+    </a>
+    <a href="faq.html" class="group relative block aspect-[3/4] overflow-hidden bg-jungle">
+      <img src="https://sealandexpeditions.com/wp-content/uploads/2023/11/tours_cockscomb-santuary.jpg" alt="" loading="lazy" class="h-full w-full object-cover opacity-70 transition group-hover:scale-105 group-hover:opacity-80">
+      <div class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/70 to-transparent p-5 text-center text-white">
+        <h3 class="font-serif text-2xl font-semibold">FAQ</h3>
+        <span class="mt-2 inline-block text-sm tracking-wide uppercase underline">Learn more</span>
+      </div>
+    </a>
+    <a href="gallery.html" class="group relative block aspect-[3/4] overflow-hidden bg-jungle">
+      <img src="https://sealandexpeditions.com/wp-content/uploads/2023/11/tours_xunantunich.jpg" alt="" loading="lazy" class="h-full w-full object-cover opacity-70 transition group-hover:scale-105 group-hover:opacity-80">
+      <div class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/70 to-transparent p-5 text-center text-white">
+        <h3 class="font-serif text-2xl font-semibold">Gallery</h3>
+        <span class="mt-2 inline-block text-sm tracking-wide uppercase underline">View now</span>
+      </div>
+    </a>
+    <a href="contact.html" class="group relative block aspect-[3/4] overflow-hidden bg-jungle">
+      <img src="https://sealandexpeditions.com/wp-content/uploads/2023/11/tours_zoo.jpg" alt="" loading="lazy" class="h-full w-full object-cover opacity-70 transition group-hover:scale-105 group-hover:opacity-80">
+      <div class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/70 to-transparent p-5 text-center text-white">
+        <h3 class="font-serif text-2xl font-semibold">Inquire Today</h3>
+        <span class="mt-2 inline-block text-sm tracking-wide uppercase underline">Contact us</span>
+      </div>
+    </a>
+</div></section>
+
+<section class="bg-jungle py-14 text-center text-white">
+  <div class="mx-auto max-w-3xl px-5">
+    <h2 class="font-serif text-3xl font-semibold md:text-4xl">Book your adventure now and experience Belize with us!</h2>
+    <p class="mt-4 text-white/85">Come, explore the wonders of Belize, and let SeaLand Expeditions be your gateway to a world of adventure and enchantment.</p>
+    <a href="tours.html" class="mt-7 inline-block bg-river px-6 py-3 text-sm font-semibold tracking-wide text-white uppercase hover:bg-river-dark">Book today</a>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="bg-leaf text-white">
+  <div class="mx-auto grid max-w-6xl gap-10 px-5 py-14 md:grid-cols-4">
+    <div>
+      <img src="https://sealandexpeditions.com/wp-content/uploads/2023/11/sealand-expedition_logo-2x.png" alt="SeaLand Expeditions" class="h-16 w-auto">
+      <p class="mt-4 text-sm text-white/90">Explore our <a href="tours.html" class="underline">list of tours</a> or customize your own today!</p>
+      <a href="tel:+5016714571" class="mt-4 inline-block bg-jungle px-5 py-3 text-sm font-semibold tracking-wide uppercase hover:bg-jungle-deep">Call +501-671-4571</a>
+    </div>
+    <div>
+      <h2 class="font-serif text-xl font-semibold">Quick Links</h2>
+      <ul class="mt-4 space-y-2 text-sm">
+        <li><a href="index.html" class="hover:underline">Home</a></li>
+        <li><a href="about.html" class="hover:underline">About Us</a></li>
+        <li><a href="tours.html" class="hover:underline">Tours</a></li>
+        <li><a href="contact.html" class="hover:underline">Contact</a></li>
+      </ul>
+    </div>
+    <div>
+      <h2 class="font-serif text-xl font-semibold">Other Pages</h2>
+      <ul class="mt-4 space-y-2 text-sm">
+        <li><a href="booking.html" class="hover:underline">Booking</a></li>
+        <li><a href="gallery.html" class="hover:underline">Gallery</a></li>
+        <li><a href="faq.html" class="hover:underline">FAQ</a></li>
+      </ul>
+    </div>
+    <div>
+      <h2 class="font-serif text-xl font-semibold">Contact Info</h2>
+      <ul class="mt-4 space-y-2 text-sm">
+        <li>Belmopan City, Cayo, Belize</li>
+        <li><a href="tel:+5016714571" class="hover:underline">+501-671-4571</a></li>
+        <li><a href="mailto:sealandexpeditions@gmail.com" class="hover:underline">sealandexpeditions@gmail.com</a></li>
+        <li><a href="https://www.instagram.com/sealandexpeditions" class="hover:underline">@sealandexpeditions</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="border-t border-white/20 py-5 text-center text-sm text-white/90">Copyright &copy; <span id="year">2026</span> SeaLand Expeditions. All rights reserved.</div>
+</footer>
+
+<!-- WhatsApp chat button -->
+<a href="https://wa.me/5016714571" class="fixed right-4 bottom-4 z-50 rounded-full bg-[#25d366] px-5 py-3 text-sm font-bold text-white shadow-lg hover:brightness-95" aria-label="Chat with us on WhatsApp">WhatsApp Chat</a>
+
+<script>
+  document.getElementById('year').textContent = new Date().getFullYear();
+  var btn = document.getElementById('menu-btn'), menu = document.getElementById('mobile-menu');
+  btn.addEventListener('click', function () {
+    var open = menu.classList.toggle('hidden') === false;
+    btn.setAttribute('aria-expanded', open);
+  });
+</script>
+</body>
+</html>
