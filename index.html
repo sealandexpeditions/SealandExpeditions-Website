@@ -129,7 +129,7 @@ details[open] .chev { transform: rotate(180deg); }
   </div>
   <div class="md:col-span-3">
     <div class="aspect-video w-full overflow-hidden bg-black">
-      <iframe id="belize-video" class="pointer-events-none h-full w-full" src="https://www.youtube.com/embed/3EgAK-fd318?enablejsapi=1&mute=1&playsinline=1&rel=0&controls=0&modestbranding=1&iv_load_policy=3&disablekb=1" title="Belize video from the Travel Belize YouTube channel" allow="autoplay; encrypted-media; picture-in-picture" tabindex="-1"></iframe>
+      <iframe id="belize-video" class="pointer-events-none h-full w-full" src="https://www.youtube.com/embed/3EgAK-fd318?autoplay=1&enablejsapi=1&mute=1&playsinline=1&rel=0&controls=0&modestbranding=1&iv_load_policy=3&disablekb=1" title="Belize video from the Travel Belize YouTube channel" allow="autoplay; encrypted-media; picture-in-picture" tabindex="-1"></iframe>
     </div>
     <div class="mt-3 flex flex-wrap items-center gap-2">
       <button type="button" id="video-sound" class="border border-stone-300 px-4 py-2 text-sm font-semibold tracking-wide uppercase hover:border-leaf hover:text-leaf">Turn sound on</button>
@@ -244,14 +244,15 @@ details[open] .chev { transform: rotate(180deg); }
   });
 </script>
 <script>
-  // Plays the Belize video (muted) when it scrolls into view and pauses it when it leaves.
+  // Starts the Belize video (muted) as soon as the page loads so there is no wait, restarts it from
+  // the beginning when the visitor first scrolls to it, and pauses it when they scroll away again.
   // The video's own controls are hidden; the buttons under the video control sound and play/pause.
   (function () {
     var frame = document.getElementById('belize-video');
     if (!frame) return;
     var soundBtn = document.getElementById('video-sound');
     var playBtn = document.getElementById('video-play');
-    var player, ready = false, visible = false, userPaused = false;
+    var player, ready = false, visible = false, seen = false, userPaused = false;
     var reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
     function labels() {
       if (!ready) return;
@@ -261,13 +262,18 @@ details[open] .chev { transform: rotate(180deg); }
     }
     function sync() {
       if (!ready || reduceMotion) return;
-      if (!visible) { player.pauseVideo(); } else if (!userPaused) { player.playVideo(); }
+      if (visible) {
+        if (!seen) { seen = true; player.seekTo(0, true); }
+        if (!userPaused) { player.playVideo(); }
+      } else if (seen) {
+        player.pauseVideo();
+      }
     }
     window.onYouTubeIframeAPIReady = function () {
       player = new YT.Player('belize-video', { events: {
-        onReady: function (e) { e.target.mute(); ready = true; labels(); sync(); },
+        onReady: function (e) { e.target.mute(); ready = true; if (reduceMotion) { player.pauseVideo(); } labels(); sync(); },
         onStateChange: function (e) {
-          if (e.data === 0) { userPaused = true; player.seekTo(0, true); player.pauseVideo(); }
+          if (e.data === 0) { if (seen) { userPaused = true; } player.seekTo(0, true); player.pauseVideo(); }
           labels();
         }
       } });
