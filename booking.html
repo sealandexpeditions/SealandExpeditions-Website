@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Booking – SeaLand Expeditions</title>
+<meta name="description" content="Send a booking inquiry for a SeaLand Expeditions tour in Belize. We reply by email within 24 hours to confirm your dates.">
+<link rel="icon" href="https://sealandexpeditions.com/wp-content/uploads/2023/11/sealand-expeditions-logo-300x300.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;600;700&family=Source+Serif+4:wght@400;600;700&display=swap" rel="stylesheet">
+<!-- Tailwind CSS. Keep this exact URL: a shortened version breaks the whole site. -->
+<script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+<style type="text/tailwindcss">
+@theme {
+  --color-jungle: #123524;
+  --color-jungle-deep: #0b2217;
+  --color-leaf: #558f58;
+  --color-leaf-light: #6aaa60;
+  --color-river: #0b8fd6;
+  --color-river-dark: #0873ae;
+  --font-serif: "Source Serif 4", Georgia, serif;
+  --font-sans: "Source Sans 3", system-ui, -apple-system, "Segoe UI", sans-serif;
+}
+html { scroll-behavior: smooth; }
+.angle-bottom { clip-path: polygon(0 0, 100% 0, 100% calc(100% - 3rem), 70% 100%, 45% calc(100% - 2rem), 20% calc(100% - 1rem), 0 calc(100% - 2.5rem)); }
+@media (min-width: 768px) { .angle-bottom { clip-path: polygon(0 0, 100% 0, 100% calc(100% - 4.5rem), 78% 100%, 52% calc(100% - 3rem), 26% calc(100% - 1.5rem), 0 calc(100% - 3.5rem)); } }
+details > summary { list-style: none; }
+details > summary::-webkit-details-marker { display: none; }
+details[open] .chev { transform: rotate(180deg); }
+.form-status[data-state="ok"] { color: #1d6b32; }
+.form-status[data-state="error"] { color: #b42318; }
+</style>
+</head>
+<body class="bg-white font-sans text-stone-600 antialiased">
+
+<!-- Top bar -->
+<div class="bg-jungle-deep text-sm text-white/90">
+  <div class="mx-auto flex max-w-6xl flex-wrap items-center justify-between gap-x-6 gap-y-1 px-5 py-2">
+    <div class="flex flex-wrap gap-x-6 gap-y-1">
+      <a href="mailto:sealandexpeditions@gmail.com" class="hover:text-leaf-light">sealandexpeditions@gmail.com</a>
+      <a href="tel:+5016714571" class="hover:text-leaf-light">+501-671-4571</a>
+    </div>
+    <a href="https://www.instagram.com/sealandexpeditions" class="hover:text-leaf-light">Instagram</a>
+  </div>
+</div>
+<!-- Navigation -->
+<header class="bg-jungle">
+  <div class="mx-auto flex max-w-6xl items-center justify-between px-5 py-3">
+    <a href="index.html" aria-label="SeaLand Expeditions home"><img src="https://sealandexpeditions.com/wp-content/uploads/2023/11/sealand-expedition_logo-2x.png" alt="SeaLand Expeditions" class="h-14 w-auto"></a>
+    <nav class="hidden items-center gap-1 lg:flex" aria-label="Main">
+      <a href="index.html" class="px-3 py-2 text-sm tracking-wide uppercase text-white hover:text-leaf-light">Home</a><a href="about.html" class="px-3 py-2 text-sm tracking-wide uppercase text-white hover:text-leaf-light">About</a><a href="tours.html" class="px-3 py-2 text-sm tracking-wide uppercase text-white hover:text-leaf-light">Tours</a><a href="gallery.html" class="px-3 py-2 text-sm tracking-wide uppercase text-white hover:text-leaf-light">Gallery</a><a href="booking.html" class="px-3 py-2 text-sm tracking-wide uppercase text-leaf-light">Booking</a><a href="faq.html" class="px-3 py-2 text-sm tracking-wide uppercase text-white hover:text-leaf-light">FAQ</a><a href="contact.html" class="px-3 py-2 text-sm tracking-wide uppercase text-white hover:text-leaf-light">Contact</a>
+      <a href="booking.html" class="ml-3 border border-white px-5 py-2 text-sm tracking-wide text-white uppercase hover:bg-white hover:text-jungle">Book now</a>
+    </nav>
+    <button id="menu-btn" class="border border-white/60 px-3 py-2 text-white lg:hidden" aria-expanded="false" aria-controls="mobile-menu">Menu</button>
+  </div>
+  <nav id="mobile-menu" class="hidden lg:hidden" aria-label="Mobile">
+    <a href="index.html" class="block px-5 py-3 border-t border-white/10 text-white">Home</a><a href="about.html" class="block px-5 py-3 border-t border-white/10 text-white">About</a><a href="tours.html" class="block px-5 py-3 border-t border-white/10 text-white">Tours</a><a href="gallery.html" class="block px-5 py-3 border-t border-white/10 text-white">Gallery</a><a href="booking.html" class="block px-5 py-3 border-t border-white/10 text-leaf-light">Booking</a><a href="faq.html" class="block px-5 py-3 border-t border-white/10 text-white">FAQ</a><a href="contact.html" class="block px-5 py-3 border-t border-white/10 text-white">Contact</a>
+    <a href="booking.html" class="block bg-river px-5 py-3 text-center font-semibold tracking-wide text-white uppercase">Book now</a>
+  </nav>
+</header>
+
+<section class="angle-bottom bg-jungle pt-14 pb-24 text-white md:pt-20 md:pb-32">
+  <div class="mx-auto max-w-6xl px-5">
+    <h1 class="font-serif text-4xl font-semibold md:text-6xl">Book Your Tour</h1>
+    
+  </div>
+</section>
+
+<section class="mx-auto max-w-2xl px-5 py-14 md:py-20">
+  <h2 class="font-serif text-3xl font-semibold text-stone-900">Tour Booking Form</h2>
+  <p class="mt-3 mb-8 leading-relaxed">Fill out this quick form and our local team will email you back within 24 hours to confirm your dates. Prefer to talk? Call or WhatsApp <a href="tel:+5016714571" class="font-semibold text-river underline">+501-671-4571</a>.</p>
+  <div class="border border-stone-200 bg-white p-6 shadow-sm md:p-8">
+<form action="https://api.web3forms.com/submit" method="POST" data-web3 class="space-y-5">
+  <input type="hidden" name="access_key" value="d49e2d0f-ee16-4859-b8e2-337ad9957e73">
+  <input type="hidden" name="subject" value="New SeaLand Expeditions booking request">
+  <input type="hidden" name="from_name" value="SeaLand Expeditions website">
+  <input type="checkbox" name="botcheck" class="hidden" style="display:none" tabindex="-1" autocomplete="off">
+  <div class="grid gap-5 md:grid-cols-2">
+    <div><label class="mb-1 block text-sm font-semibold text-stone-700" for="name">Full name</label><input id="name" type="text" name="name" required autocomplete="name" placeholder="John Doe" class="w-full border border-stone-300 bg-white px-4 py-2.5 text-stone-800 focus:border-leaf focus:outline-2 focus:outline-leaf/40"></div>
+    <div><label class="mb-1 block text-sm font-semibold text-stone-700" for="email">Email address</label><input id="email" type="email" name="email" required autocomplete="email" placeholder="john@example.com" class="w-full border border-stone-300 bg-white px-4 py-2.5 text-stone-800 focus:border-leaf focus:outline-2 focus:outline-leaf/40"></div>
+  </div>
+  <div><label class="mb-1 block text-sm font-semibold text-stone-700" for="tour_type">Select your adventure</label>
+    <select id="tour_type" name="tour_type" required class="w-full border border-stone-300 bg-white px-4 py-2.5 text-stone-800 focus:border-leaf focus:outline-2 focus:outline-leaf/40"><option value="">-- Choose a tour --</option><option value="Cave Tubing">Cave Tubing</option><option value="Cave Tubing &amp; Zip Line Combo">Cave Tubing &amp; Zip Line Combo</option><option value="Xunantunich &amp; Cave Tubing">Xunantunich &amp; Cave Tubing</option><option value="Xunantunich &amp; St. Herman&#x27;s Blue Hole">Xunantunich &amp; St. Herman&#x27;s Blue Hole</option><option value="The Belize Zoo &amp; Cave Tubing">The Belize Zoo &amp; Cave Tubing</option><option value="Cockscomb Wildlife Sanctuary and Jaguar Preserve River Tubing">Cockscomb Wildlife Sanctuary and Jaguar Preserve River Tubing</option><option value="ATM Cave Exploration">ATM Cave Exploration</option><option value="Customized Tour">Customized Tour</option></select></div>
+  <div class="grid gap-5 md:grid-cols-2">
+    <div><label class="mb-1 block text-sm font-semibold text-stone-700" for="preferred_date">Preferred tour date</label><input id="preferred_date" type="date" name="preferred_date" required class="w-full border border-stone-300 bg-white px-4 py-2.5 text-stone-800 focus:border-leaf focus:outline-2 focus:outline-leaf/40"></div>
+    <div><label class="mb-1 block text-sm font-semibold text-stone-700" for="guests_count">Number of travelers</label><input id="guests_count" type="number" name="guests_count" min="1" max="50" required placeholder="2" class="w-full border border-stone-300 bg-white px-4 py-2.5 text-stone-800 focus:border-leaf focus:outline-2 focus:outline-leaf/40"></div>
+  </div>
+  <div><label class="mb-1 block text-sm font-semibold text-stone-700" for="message">Special requests or questions</label>
+    <textarea id="message" name="message" rows="4" placeholder="Dietary needs, hotel pickup, group size changes..." class="w-full border border-stone-300 bg-white px-4 py-2.5 text-stone-800 focus:border-leaf focus:outline-2 focus:outline-leaf/40"></textarea></div>
+  <button type="submit" class="w-full bg-river px-6 py-3.5 font-semibold tracking-wide text-white uppercase hover:bg-river-dark">Submit booking inquiry</button>
+  <p class="form-status text-sm" role="status" aria-live="polite"></p>
+</form>
+<script>
+  // Preselect the tour when arriving from a tour page (booking.html?tour=Cave%20Tubing) and block past dates.
+  (function () {
+    var t = new URLSearchParams(location.search).get('tour');
+    if (t) document.getElementById('tour_type').value = t;
+    document.getElementById('preferred_date').min = new Date().toISOString().split('T')[0];
+  })();
+</script>
+</div>
+</section>
+<section class="bg-stone-50 py-14 md:py-20">
+  <div class="mx-auto max-w-6xl px-5">
+    <h2 class="text-center font-serif text-4xl font-semibold text-stone-900">Popular Tours</h2>
+    <div class="mt-10 grid gap-6 md:grid-cols-3">
+    <article class="bg-white shadow-sm">
+      <img src="https://sealandexpeditions.com/wp-content/uploads/2023/11/tours_cave-tubing.jpg" alt="Cave Tubing" loading="lazy" class="aspect-[4/3] w-full object-cover">
+      <div class="p-6"><h3 class="font-serif text-xl font-semibold text-stone-900">Cave Tubing</h3>
+        <p class="mt-2 text-[15px] leading-relaxed">Float through cave passages on the Caves Branch river. From $65 per person.</p>
+        <a href="tours.html#cave" class="mt-4 inline-block font-semibold text-river underline">Learn more</a></div>
+    </article>
+    <article class="bg-white shadow-sm">
+      <img src="https://sealandexpeditions.com/wp-content/uploads/2023/11/tours_xunantunich.jpg" alt="Xunantunich &amp; Cave Tubing" loading="lazy" class="aspect-[4/3] w-full object-cover">
+      <div class="p-6"><h3 class="font-serif text-xl font-semibold text-stone-900">Xunantunich &amp; Cave Tubing</h3>
+        <p class="mt-2 text-[15px] leading-relaxed">Climb El Castillo, enjoy a Belizean lunch, then tube an underground river. $210 per person.</p>
+        <a href="tours.html#xunancave" class="mt-4 inline-block font-semibold text-river underline">Learn more</a></div>
+    </article>
+    <article class="bg-white shadow-sm">
+      <img src="https://sealandexpeditions.com/wp-content/uploads/2023/11/tours-atm-cave.jpg" alt="ATM Cave Exploration" loading="lazy" class="aspect-[4/3] w-full object-cover">
+      <div class="p-6"><h3 class="font-serif text-xl font-semibold text-stone-900">ATM Cave Exploration</h3>
+        <p class="mt-2 text-[15px] leading-relaxed">Ask us for details and pricing on this adventure.</p>
+        <a href="contact.html" class="mt-4 inline-block font-semibold text-river underline">Learn more</a></div>
+    </article>
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="bg-leaf text-white">
+  <div class="mx-auto grid max-w-6xl gap-10 px-5 py-14 md:grid-cols-4">
+    <div>
+      <img src="https://sealandexpeditions.com/wp-content/uploads/2023/11/sealand-expedition_logo-2x.png" alt="SeaLand Expeditions" class="h-16 w-auto">
+      <p class="mt-4 text-sm text-white/90">Explore our <a href="tours.html" class="underline">list of tours</a> or customize your own today!</p>
+      <a href="tel:+5016714571" class="mt-4 inline-block bg-jungle px-5 py-3 text-sm font-semibold tracking-wide uppercase hover:bg-jungle-deep">Call +501-671-4571</a>
+    </div>
+    <div>
+      <h2 class="font-serif text-xl font-semibold">Quick Links</h2>
+      <ul class="mt-4 space-y-2 text-sm">
+        <li><a href="index.html" class="hover:underline">Home</a></li>
+        <li><a href="about.html" class="hover:underline">About Us</a></li>
+        <li><a href="tours.html" class="hover:underline">Tours</a></li>
+        <li><a href="contact.html" class="hover:underline">Contact</a></li>
+      </ul>
+    </div>
+    <div>
+      <h2 class="font-serif text-xl font-semibold">Other Pages</h2>
+      <ul class="mt-4 space-y-2 text-sm">
+        <li><a href="booking.html" class="hover:underline">Booking</a></li>
+        <li><a href="gallery.html" class="hover:underline">Gallery</a></li>
+        <li><a href="faq.html" class="hover:underline">FAQ</a></li>
+      </ul>
+    </div>
+    <div>
+      <h2 class="font-serif text-xl font-semibold">Contact Info</h2>
+      <ul class="mt-4 space-y-2 text-sm">
+        <li>Belmopan City, Cayo, Belize</li>
+        <li><a href="tel:+5016714571" class="hover:underline">+501-671-4571</a></li>
+        <li><a href="mailto:sealandexpeditions@gmail.com" class="hover:underline">sealandexpeditions@gmail.com</a></li>
+        <li><a href="https://www.instagram.com/sealandexpeditions" class="hover:underline">@sealandexpeditions</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="border-t border-white/20 py-5 text-center text-sm text-white/90">Copyright &copy; <span id="year">2026</span> SeaLand Expeditions. All rights reserved.</div>
+</footer>
+
+<!-- WhatsApp chat button -->
+<a href="https://wa.me/5016714571" class="fixed right-4 bottom-4 z-50 rounded-full bg-[#25d366] px-5 py-3 text-sm font-bold text-white shadow-lg hover:brightness-95" aria-label="Chat with us on WhatsApp">WhatsApp Chat</a>
+
+<script>
+  document.getElementById('year').textContent = new Date().getFullYear();
+  var btn = document.getElementById('menu-btn'), menu = document.getElementById('mobile-menu');
+  btn.addEventListener('click', function () {
+    var open = menu.classList.toggle('hidden') === false;
+    btn.setAttribute('aria-expanded', open);
+  });
+</script>
+
+<script>
+  // Sends the form to Web3Forms in the background and shows a message on the page.
+  document.querySelectorAll('form[data-web3]').forEach(function (form) {
+    var status = form.querySelector('.form-status');
+    form.addEventListener('submit', async function (e) {
+      e.preventDefault();
+      var button = form.querySelector('button[type="submit"]');
+      var label = button.textContent;
+      button.disabled = true; button.textContent = 'Sending...';
+      status.textContent = ''; status.removeAttribute('data-state');
+      try {
+        var res = await fetch(form.action, { method: 'POST', headers: { Accept: 'application/json' }, body: new FormData(form) });
+        var data = await res.json();
+        if (!res.ok || !data.success) throw new Error(data.message || 'The form service rejected the request');
+        form.reset();
+        status.dataset.state = 'ok';
+        status.textContent = "Thank you! We got your message and will email you back within 24 hours.";
+      } catch (err) {
+        status.dataset.state = 'error';
+        status.textContent = 'Your message did not send (' + err.message + '). Please try again or call +501-671-4571.';
+      } finally { button.disabled = false; button.textContent = label; }
+    });
+  });
+</script>
+</body>
+</html>
