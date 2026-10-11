@@ -24,10 +24,10 @@ Every page repeats the same top bar, navigation, and footer. If you change the n
 - The small script at the bottom of each form page submits in the background and shows a thank-you message. Keep it.
 - booking.html reads `?tour=` from the URL to preselect a tour. The option text must match the tour name exactly.
 
-## Images (important)
-- Images currently load from https://sealandexpeditions.com/wp-content/uploads/2023/11/ (the old WordPress site).
-- Before the WordPress site is turned off or the domain is moved, download those images into an `images/` folder in this repo and change every image URL to `images/<filename>`. Otherwise every photo will break.
-- Compress new photos before adding them.
+## Images
+- All photos live in the `Media/` folder in this repo (capital M; file names are case-sensitive). Pages link to them as `Media/<filename>`.
+- To add a photo, upload it into `Media/` and reference it as `Media/<filename>`.
+- Compress new photos before adding them (the two collage PNGs are over 1 MB and could be shrunk).
 
 ## Working rules
 - Write every URL out in full; never shorten links.
