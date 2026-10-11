@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tours – SeaLand Expeditions</title>
+<meta name="description" content="Cave tubing, ziplining, Xunantunich Mayan ruins, the Inland Blue Hole, the Belize Zoo and Cockscomb jaguar preserve tours from Belmopan, Belize.">
+<link rel="icon" href="https://sealandexpeditions.com/wp-content/uploads/2023/11/sealand-expeditions-logo-300x300.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;600;700&family=Source+Serif+4:wght@400;600;700&display=swap" rel="stylesheet">
+<!-- Tailwind CSS. Keep this exact URL: a shortened version breaks the whole site. -->
+<script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+<style type="text/tailwindcss">
+@theme {
+  --color-jungle: #123524;
+  --color-jungle-deep: #0b2217;
+  --color-leaf: #558f58;
+  --color-leaf-light: #6aaa60;
+  --color-river: #0b8fd6;
+  --color-river-dark: #0873ae;
+  --font-serif: "Source Serif 4", Georgia, serif;
+  --font-sans: "Source Sans 3", system-ui, -apple-system, "Segoe UI", sans-serif;
+}
+html { scroll-behavior: smooth; }
+.angle-bottom { clip-path: polygon(0 0, 100% 0, 100% calc(100% - 3rem), 70% 100%, 45% calc(100% - 2rem), 20% calc(100% - 1rem), 0 calc(100% - 2.5rem)); }
+@media (min-width: 768px) { .angle-bottom { clip-path: polygon(0 0, 100% 0, 100% calc(100% - 4.5rem), 78% 100%, 52% calc(100% - 3rem), 26% calc(100% - 1.5rem), 0 calc(100% - 3.5rem)); } }
+details > summary { list-style: none; }
+details > summary::-webkit-details-marker { display: none; }
+details[open] .chev { transform: rotate(180deg); }
+.form-status[data-state="ok"] { color: #1d6b32; }
+.form-status[data-state="error"] { color: #b42318; }
+</style>
+</head>
+<body class="bg-white font-sans text-stone-600 antialiased">
+
+<!-- Top bar -->
+<div class="bg-jungle-deep text-sm text-white/90">
+  <div class="mx-auto flex max-w-6xl flex-wrap items-center justify-between gap-x-6 gap-y-1 px-5 py-2">
+    <div class="flex flex-wrap gap-x-6 gap-y-1">
+      <a href="mailto:sealandexpeditions@gmail.com" class="hover:text-leaf-light">sealandexpeditions@gmail.com</a>
+      <a href="tel:+5016714571" class="hover:text-leaf-light">+501-671-4571</a>
+    </div>
+    <a href="https://www.instagram.com/sealandexpeditions" class="hover:text-leaf-light">Instagram</a>
+  </div>
+</div>
+<!-- Navigation -->
+<header class="bg-jungle">
+  <div class="mx-auto flex max-w-6xl items-center justify-between px-5 py-3">
+    <a href="index.html" aria-label="SeaLand Expeditions home"><img src="https://sealandexpeditions.com/wp-content/uploads/2023/11/sealand-expedition_logo-2x.png" alt="SeaLand Expeditions" class="h-14 w-auto"></a>
+    <nav class="hidden items-center gap-1 lg:flex" aria-label="Main">
+      <a href="index.html" class="px-3 py-2 text-sm tracking-wide uppercase text-white hover:text-leaf-light">Home</a><a href="about.html" class="px-3 py-2 text-sm tracking-wide uppercase text-white hover:text-leaf-light">About</a><a href="tours.html" class="px-3 py-2 text-sm tracking-wide uppercase text-leaf-light">Tours</a><a href="gallery.html" class="px-3 py-2 text-sm tracking-wide uppercase text-white hover:text-leaf-light">Gallery</a><a href="booking.html" class="px-3 py-2 text-sm tracking-wide uppercase text-white hover:text-leaf-light">Booking</a><a href="faq.html" class="px-3 py-2 text-sm tracking-wide uppercase text-white hover:text-leaf-light">FAQ</a><a href="contact.html" class="px-3 py-2 text-sm tracking-wide uppercase text-white hover:text-leaf-light">Contact</a>
+      <a href="booking.html" class="ml-3 border border-white px-5 py-2 text-sm tracking-wide text-white uppercase hover:bg-white hover:text-jungle">Book now</a>
+    </nav>
+    <button id="menu-btn" class="border border-white/60 px-3 py-2 text-white lg:hidden" aria-expanded="false" aria-controls="mobile-menu">Menu</button>
+  </div>
+  <nav id="mobile-menu" class="hidden lg:hidden" aria-label="Mobile">
+    <a href="index.html" class="block px-5 py-3 border-t border-white/10 text-white">Home</a><a href="about.html" class="block px-5 py-3 border-t border-white/10 text-white">About</a><a href="tours.html" class="block px-5 py-3 border-t border-white/10 text-leaf-light">Tours</a><a href="gallery.html" class="block px-5 py-3 border-t border-white/10 text-white">Gallery</a><a href="booking.html" class="block px-5 py-3 border-t border-white/10 text-white">Booking</a><a href="faq.html" class="block px-5 py-3 border-t border-white/10 text-white">FAQ</a><a href="contact.html" class="block px-5 py-3 border-t border-white/10 text-white">Contact</a>
+    <a href="booking.html" class="block bg-river px-5 py-3 text-center font-semibold tracking-wide text-white uppercase">Book now</a>
+  </nav>
+</header>
+
+<section class="angle-bottom bg-jungle pt-14 pb-24 text-white md:pt-20 md:pb-32">
+  <div class="mx-auto max-w-6xl px-5">
+    <h1 class="font-serif text-4xl font-semibold md:text-6xl">Tours</h1>
+    
+  </div>
+</section>
+
+<div class="mx-auto max-w-6xl px-5 py-12">
+  <div class="grid items-center gap-10 md:grid-cols-2" id="top-list">
+    <img src="https://sealandexpeditions.com/wp-content/uploads/2023/11/tour-collage1-1024x850.png" alt="SeaLand Expeditions tour photos" class="w-full">
+    <div>
+      <h2 class="font-serif text-3xl font-semibold text-stone-900">Tour Listing Menu</h2>
+      <ul class="mt-4"><li><a href="#cave" class="block border-b border-stone-200 py-3 hover:text-leaf">Cave Tubing</a></li><li><a href="#cavezip" class="block border-b border-stone-200 py-3 hover:text-leaf">Cave Tubing &amp; Zip Line Combo</a></li><li><a href="#xunancave" class="block border-b border-stone-200 py-3 hover:text-leaf">Xunantunich &amp; Cave Tubing</a></li><li><a href="#xunanblue" class="block border-b border-stone-200 py-3 hover:text-leaf">Xunantunich &amp; St. Herman&#x27;s Blue Hole (Inland Blue Hole)</a></li><li><a href="#zoocave" class="block border-b border-stone-200 py-3 hover:text-leaf">The Belize Zoo &amp; Cave Tubing</a></li><li><a href="#cockscomb" class="block border-b border-stone-200 py-3 hover:text-leaf">Cockscomb Wildlife Sanctuary and Jaguar Preserve River Tubing</a></li><li><a href="#customize" class="block border-b border-stone-200 py-3 hover:text-leaf">Customized Tours</a></li></ul>
+    </div>
+  </div>
+  
+<article id="cave" class="scroll-mt-6 border-t border-stone-200 py-14">
+  <div class="grid gap-3 sm:grid-cols-2">
+    <img src="https://sealandexpeditions.com/wp-content/uploads/2023/11/tours_cave-tubing-alt.jpg" alt="Cave Tubing" loading="lazy" class="aspect-[4/3] w-full object-cover">
+    <img src="https://sealandexpeditions.com/wp-content/uploads/2023/11/tours_cave-tubing.jpg" alt="Cave Tubing, more photos" loading="lazy" class="aspect-[4/3] w-full object-cover">
+  </div>
+  <div class="mt-8 grid gap-10 lg:grid-cols-3">
+    <div class="lg:col-span-2">
+      <h2 class="font-serif text-3xl font-semibold text-stone-900 md:text-4xl">Cave Tubing</h2>
+      <p class="mt-1 text-sm font-semibold tracking-wide text-leaf uppercase">Minimum of 4 people per tour</p>
+      <div class="mt-5 space-y-4 leading-relaxed"><p>Cave Tubing in Belize offers an exhilarating adventure, taking you on a journey under the lush forest canopy, down the meandering Caves Branch river, and into the fascinating cave passages of the Nohoch Che'en Archaeological Reserve. Located just a 45-minute drive from Belize City or a 1-hour drive from San Ignacio at mile 37 on the George Price Highway, this experience promises excitement from the moment you arrive.</p><p>Upon arrival, you'll have the chance to change and freshen up in the changing rooms and restrooms. Then, equipped with helmets, headlights, and personal flotation devices (PFDs), all safety equipment is mandatory for everyone taking part in the tour. After gearing up you'll embark on a guided hike through the tropical broadleaf forest.</p><p>Your friendly tour guide will share intriguing facts about the plants and wildlife that call this environment home. As you continue the leisurely hike, you'll eventually reach the entrance of the cave. From there, you'll embark on a 1.5-hour river tubing adventure on specially designed tubes, floating downstream through the cave passages. Along the way, your guide will provide insights into the geological wonders and ancient history of the limestone caves. Keep in mind that Cave Tubing is a water activity, so prepare to get wet.</p></div>
+    </div>
+    <aside class="space-y-6">
+      <div class="bg-stone-50 p-6">
+        <h3 class="font-serif text-xl font-semibold text-stone-900">Things to bring</h3>
+        <p class="mt-2 text-[15px] leading-relaxed">Bug spray, sunscreen, dry clothes for the drive back after the tour, swimming trunks or a bathing suit. Footwear should have closed heels: water shoes, crocs, dive booties, or sandals are ideal. No flip flops allowed. If you don't have suitable footwear, rentals are available on-site.</p>
+      </div>
+      <div class="bg-jungle p-6 text-white">
+        <h3 class="font-serif text-xl font-semibold">Price</h3>
+        <p class="mt-1 font-serif text-3xl font-semibold">$65.00 <span class="text-base font-normal">USD per person</span></p>
+        <p class="mt-1 text-sm text-white/85">Price includes archaeological reserve fee, gear rental, and tour guide fees.</p>
+        <p class="mt-3 text-sm italic text-white/85">We also cater for transportation to and from wherever you are staying (hotel, airport, Airbnb), with lunch and complimentary drinks, for an added fee.</p>
+        <a href="booking.html?tour=Cave%20Tubing" class="mt-5 block text-center bg-river px-6 py-3 text-sm font-semibold tracking-wide text-white uppercase hover:bg-river-dark">Book tour now</a>
+      </div>
+    </aside>
+  </div>
+  <p class="mt-6 text-sm"><a href="#top-list" class="font-semibold italic text-leaf hover:underline">Go back to tour list</a></p>
+</article>
+<article id="cavezip" class="scroll-mt-6 border-t border-stone-200 py-14">
+  <div class="grid gap-3 sm:grid-cols-2">
+    <img src="https://sealandexpeditions.com/wp-content/uploads/2023/11/tours_cave-tubing.jpg" alt="Cave Tubing &amp; Zip Line Combo" loading="lazy" class="aspect-[4/3] w-full object-cover">
+    <img src="https://sealandexpeditions.com/wp-content/uploads/2023/11/tours_zip-lining.jpg" alt="Cave Tubing &amp; Zip Line Combo, more photos" loading="lazy" class="aspect-[4/3] w-full object-cover">
+  </div>
+  <div class="mt-8 grid gap-10 lg:grid-cols-3">
+    <div class="lg:col-span-2">
+      <h2 class="font-serif text-3xl font-semibold text-stone-900 md:text-4xl">Cave Tubing &amp; Zip Line Combo</h2>
+      <p class="mt-1 text-sm font-semibold tracking-wide text-leaf uppercase">Minimum of 4 people per tour</p>
+      <div class="mt-5 space-y-4 leading-relaxed"><p>Embark on a thrilling adventure at Nohoch Che'en Archaeological Reserve with our Cave Tubing and Zipline package for just $110 USD! Prepare for an action-packed day by bringing a change of clothes, proper footwear, sunscreen, and insect repellent. For added convenience, we offer transfers to and from your accommodations for an extra fee, ensuring a seamless and enjoyable experience in this captivating natural and archaeological wonder.</p><p>Zipline under and over the forest canopy on a series of 7 different traverses and 13 platforms. After ziplining we make our way to the cave entrance, hiking under the forest canopy, to refresh ourselves in the crystal clear waters of the Caves Branch river as we tube down the river through the cave passages. Our skillful tour guide ensures both safety and an informative narrative, sharing the geological and historical significance of the caves.</p></div>
+    </div>
+    <aside class="space-y-6">
+      <div class="bg-stone-50 p-6">
+        <h3 class="font-serif text-xl font-semibold text-stone-900">Things to bring</h3>
+        <p class="mt-2 text-[15px] leading-relaxed">Change of clothes, proper footwear, sunscreen, and insect repellent.</p>
+      </div>
+      <div class="bg-jungle p-6 text-white">
+        <h3 class="font-serif text-xl font-semibold">Price</h3>
+        <p class="mt-1 font-serif text-3xl font-semibold">$110.00 <span class="text-base font-normal">USD per person</span></p>
+        
+        <p class="mt-3 text-sm italic text-white/85">We also cater for transportation to and from wherever you are staying (hotel, airport, Airbnb), with lunch and complimentary drinks, for an added fee.</p>
+        <a href="booking.html?tour=Cave%20Tubing%20%26%20Zip%20Line%20Combo" class="mt-5 block text-center bg-river px-6 py-3 text-sm font-semibold tracking-wide text-white uppercase hover:bg-river-dark">Book tour now</a>
+      </div>
+    </aside>
+  </div>
+  <p class="mt-6 text-sm"><a href="#top-list" class="font-semibold italic text-leaf hover:underline">Go back to tour list</a></p>
+</article>
+<article id="xunancave" class="scroll-mt-6 border-t border-stone-200 py-14">
+  <div class="grid gap-3 sm:grid-cols-2">
+    <img src="https://sealandexpeditions.com/wp-content/uploads/2023/11/tours_xunantunich.jpg" alt="Xunantunich &amp; Cave Tubing" loading="lazy" class="aspect-[4/3] w-full object-cover">
+    <img src="https://sealandexpeditions.com/wp-content/uploads/2023/11/tours_cave-tubing-alt.jpg" alt="Xunantunich &amp; Cave Tubing, more photos" loading="lazy" class="aspect-[4/3] w-full object-cover">
+  </div>
+  <div class="mt-8 grid gap-10 lg:grid-cols-3">
+    <div class="lg:col-span-2">
+      <h2 class="font-serif text-3xl font-semibold text-stone-900 md:text-4xl">Xunantunich &amp; Cave Tubing</h2>
+      <p class="mt-1 text-sm font-semibold tracking-wide text-leaf uppercase">Minimum of 3 people per tour</p>
+      <div class="mt-5 space-y-4 leading-relaxed"><p>Embark on a mesmerizing Belizean adventure with our Xunantunich and Cave Tubing Combo Tour, a seamless blend of ancient Mayan wonders and exhilarating natural experiences. Your day begins with a comfortable transfer from your accommodations, setting the tone for a day filled with exploration and discovery.</p><p>First, we transport you to the mystical archaeological site of Xunantunich, where you'll step back in time and immerse yourself in the grandeur of Mayan history. Ascend the towering El Castillo, the main pyramid, and marvel at panoramic views of the lush Belizean landscape from its summit. Our expert guides, well-versed in Mayan history and culture, illuminate the secrets of this ancient city.</p><p>After a morning of cultural exploration, enjoy an authentic Belizean lunch featuring local ingredients and traditional recipes. The afternoon unfolds with an exhilarating cave tubing expedition at Nohoch Che'en Archaeological Reserve. Equip yourself with a helmet, headlamp, and personal flotation device (PFD), then hike to the cave entrance and float along the gentle currents of an underground river, passing through awe-inspiring cave systems adorned with mesmerizing formations. Our skilled guides ensure both safety and an informative narrative, sharing the geological and historical significance of the caves.</p><p>At the conclusion of your cave tubing exploration, we provide a convenient transfer back to your accommodation. Throughout the day, Sealand Expeditions guarantees not just a tour but a seamless and immersive experience, leaving you with cherished memories of Belize's cultural and natural treasures.</p></div>
+    </div>
+    <aside class="space-y-6">
+      <div class="bg-stone-50 p-6">
+        <h3 class="font-serif text-xl font-semibold text-stone-900">Things to bring</h3>
+        <p class="mt-2 text-[15px] leading-relaxed">A change of clothes, sunscreen, bug spray. Hiking shoes or sneakers are recommended for the Mayan temple; no open-heel shoes are allowed for cave tubing. Water shoes, dive booties, or crocs are ideal for this adventure.</p>
+      </div>
+      <div class="bg-jungle p-6 text-white">
+        <h3 class="font-serif text-xl font-semibold">Price</h3>
+        <p class="mt-1 font-serif text-3xl font-semibold">$210.00 <span class="text-base font-normal">USD per person</span></p>
+        
+        <p class="mt-3 text-sm italic text-white/85">We also cater for transportation to and from wherever you are staying (hotel, airport, Airbnb), with lunch and complimentary drinks, for an added fee.</p>
+        <a href="booking.html?tour=Xunantunich%20%26%20Cave%20Tubing" class="mt-5 block text-center bg-river px-6 py-3 text-sm font-semibold tracking-wide text-white uppercase hover:bg-river-dark">Book tour now</a>
+      </div>
+    </aside>
+  </div>
+  <p class="mt-6 text-sm"><a href="#top-list" class="font-semibold italic text-leaf hover:underline">Go back to tour list</a></p>
+</article>
+<article id="xunanblue" class="scroll-mt-6 border-t border-stone-200 py-14">
+  <div class="grid gap-3 sm:grid-cols-2">
+    <img src="https://sealandexpeditions.com/wp-content/uploads/2023/11/tours_xunantunich-alt.jpg" alt="Xunantunich &amp; St. Herman&#x27;s Blue Hole (Inland Blue Hole)" loading="lazy" class="aspect-[4/3] w-full object-cover">
+    <img src="https://sealandexpeditions.com/wp-content/uploads/2023/11/tours-blue-hole.jpg" alt="Xunantunich &amp; St. Herman&#x27;s Blue Hole (Inland Blue Hole), more photos" loading="lazy" class="aspect-[4/3] w-full object-cover">
+  </div>
+  <div class="mt-8 grid gap-10 lg:grid-cols-3">
+    <div class="lg:col-span-2">
+      <h2 class="font-serif text-3xl font-semibold text-stone-900 md:text-4xl">Xunantunich &amp; St. Herman&#x27;s Blue Hole (Inland Blue Hole)</h2>
+      <p class="mt-1 text-sm font-semibold tracking-wide text-leaf uppercase">Minimum of 4 people per tour</p>
+      <div class="mt-5 space-y-4 leading-relaxed"><p>Embark on a full-day adventure with our Xunantunich and Inland Blue Hole tour for $210 USD, inclusive of a delicious Belizean lunch: rice and beans served with coleslaw, fried plantains and refreshing drinks. Explore the ancient Mayan temples at Xunantunich, where you'll need comfortable hiking shoes for temple exploration. Afterward, cool off in the refreshing waters of the Inland Blue Hole; don't forget your swimsuit! With morning pick-up and drop-off included, this immersive experience combines history, nature, and relaxation for an unforgettable journey through Belize's rich cultural and natural heritage.</p></div>
+    </div>
+    <aside class="space-y-6">
+      <div class="bg-stone-50 p-6">
+        <h3 class="font-serif text-xl font-semibold text-stone-900">Things to bring</h3>
+        <p class="mt-2 text-[15px] leading-relaxed">Change of clothes, towels, insect repellent, sunscreen.</p>
+      </div>
+      <div class="bg-jungle p-6 text-white">
+        <h3 class="font-serif text-xl font-semibold">Price</h3>
+        <p class="mt-1 font-serif text-3xl font-semibold">$210.00 <span class="text-base font-normal">USD per person</span></p>
+        <p class="mt-1 text-sm text-white/85">Price includes guided tour, lunch and drinks.</p>
+        <p class="mt-3 text-sm italic text-white/85">We also cater for transportation to and from wherever you are staying (hotel, airport, Airbnb), with lunch and complimentary drinks, for an added fee.</p>
+        <a href="booking.html?tour=Xunantunich%20%26%20St.%20Herman&#x27;s%20Blue%20Hole" class="mt-5 block text-center bg-river px-6 py-3 text-sm font-semibold tracking-wide text-white uppercase hover:bg-river-dark">Book tour now</a>
+      </div>
+    </aside>
+  </div>
+  <p class="mt-6 text-sm"><a href="#top-list" class="font-semibold italic text-leaf hover:underline">Go back to tour list</a></p>
+</article>
+<article id="zoocave" class="scroll-mt-6 border-t border-stone-200 py-14">
+  <div class="grid gap-3 sm:grid-cols-2">
+    <img src="https://sealandexpeditions.com/wp-content/uploads/2023/11/tours_zoo.jpg" alt="The Belize Zoo &amp; Cave Tubing" loading="lazy" class="aspect-[4/3] w-full object-cover">
+    <img src="https://sealandexpeditions.com/wp-content/uploads/2023/11/tours_cave-tubing-alt.jpg" alt="The Belize Zoo &amp; Cave Tubing, more photos" loading="lazy" class="aspect-[4/3] w-full object-cover">
+  </div>
+  <div class="mt-8 grid gap-10 lg:grid-cols-3">
+    <div class="lg:col-span-2">
+      <h2 class="font-serif text-3xl font-semibold text-stone-900 md:text-4xl">The Belize Zoo &amp; Cave Tubing</h2>
+      <p class="mt-1 text-sm font-semibold tracking-wide text-leaf uppercase">Minimum of 4 people per tour</p>
+      <div class="mt-5 space-y-4 leading-relaxed"><p>Discover the wonders of Belize's wildlife and contribute to conservation with our Belize Zoo and Nohoch Che'en Cave Tubing tour for just $130 USD. As you explore the Belize Zoo, know that every visit aids in the protection and rehabilitation of the residents, supporting a noble cause. After the zoo, a short 20-minute drive takes you to Nohoch Che'en, where you'll hike to the cave entrance under the forest canopy and float down the crystal clear Caves Branch river through the cave passages.</p><p>The Belize Zoo, also known as the Best Little Zoo in the World, is home only to creatures found in Belize. There are no non-native animals. Our skillful tour guides ensure both safety and an informative narrative, sharing the geological and historical significance of the caves, and wildlife. Transfers to and from your accommodations are available for an additional fee. Ask us about our big group and family deals!</p></div>
+    </div>
+    <aside class="space-y-6">
+      <div class="bg-stone-50 p-6">
+        <h3 class="font-serif text-xl font-semibold text-stone-900">Things to bring</h3>
+        <p class="mt-2 text-[15px] leading-relaxed">Insect repellent, sunscreen.</p>
+      </div>
+      <div class="bg-jungle p-6 text-white">
+        <h3 class="font-serif text-xl font-semibold">Price</h3>
+        <p class="mt-1 font-serif text-3xl font-semibold">$130.00 <span class="text-base font-normal">USD per person</span></p>
+        
+        <p class="mt-3 text-sm italic text-white/85">We also cater for transportation to and from wherever you are staying (hotel, airport, Airbnb), with lunch and complimentary drinks, for an added fee.</p>
+        <a href="booking.html?tour=The%20Belize%20Zoo%20%26%20Cave%20Tubing" class="mt-5 block text-center bg-river px-6 py-3 text-sm font-semibold tracking-wide text-white uppercase hover:bg-river-dark">Book tour now</a>
+      </div>
+    </aside>
+  </div>
+  <p class="mt-6 text-sm"><a href="#top-list" class="font-semibold italic text-leaf hover:underline">Go back to tour list</a></p>
+</article>
+<article id="cockscomb" class="scroll-mt-6 border-t border-stone-200 py-14">
+  <div class="grid gap-3 sm:grid-cols-2">
+    <img src="https://sealandexpeditions.com/wp-content/uploads/2023/11/tours_cockscomb-santuary.jpg" alt="Cockscomb Wildlife Sanctuary and Jaguar Preserve River Tubing" loading="lazy" class="aspect-[4/3] w-full object-cover">
+    <img src="https://sealandexpeditions.com/wp-content/uploads/2023/11/tours-tubing.jpg" alt="Cockscomb Wildlife Sanctuary and Jaguar Preserve River Tubing, more photos" loading="lazy" class="aspect-[4/3] w-full object-cover">
+  </div>
+  <div class="mt-8 grid gap-10 lg:grid-cols-3">
+    <div class="lg:col-span-2">
+      <h2 class="font-serif text-3xl font-semibold text-stone-900 md:text-4xl">Cockscomb Wildlife Sanctuary and Jaguar Preserve River Tubing</h2>
+      <p class="mt-1 text-sm font-semibold tracking-wide text-leaf uppercase">Minimum of 4 people per tour</p>
+      <div class="mt-5 space-y-4 leading-relaxed"><p>Explore the natural wonders of the Cockscomb Basin Wildlife Sanctuary Jaguar Preserve on a guided tour. Embark on a scenic 30-minute hike to the tubing starting point, where you'll learn about the diverse flora and fauna. Drift down the river on a laid-back tubing adventure, taking in the beauty of the surroundings. After the float, savor a delicious Belizean lunch.</p><p>Cockscomb Basin Wildlife Sanctuary is the only jaguar preserve in the world!</p></div>
+    </div>
+    <aside class="space-y-6">
+      <div class="bg-stone-50 p-6">
+        <h3 class="font-serif text-xl font-semibold text-stone-900">Things to bring</h3>
+        <p class="mt-2 text-[15px] leading-relaxed">Sunscreen, bug spray, and swimming trunks or a bathing suit for the river tubing, plus a set of dry clothes for the transfer back to the hotel.</p>
+      </div>
+      <div class="bg-jungle p-6 text-white">
+        <h3 class="font-serif text-xl font-semibold">Price</h3>
+        <p class="mt-1 font-serif text-3xl font-semibold">$75.00 <span class="text-base font-normal">USD per person</span></p>
+        <p class="mt-1 text-sm text-white/85">Lunch included. Transfers to and from your accommodations are available but not included in the price.</p>
+        <p class="mt-3 text-sm italic text-white/85">We also cater for transportation to and from wherever you are staying (hotel, airport, Airbnb), with lunch and complimentary drinks, for an added fee.</p>
+        <a href="booking.html?tour=Cockscomb%20Wildlife%20Sanctuary%20and%20Jaguar%20Preserve%20River%20Tubing" class="mt-5 block text-center bg-river px-6 py-3 text-sm font-semibold tracking-wide text-white uppercase hover:bg-river-dark">Book tour now</a>
+      </div>
+    </aside>
+  </div>
+  <p class="mt-6 text-sm"><a href="#top-list" class="font-semibold italic text-leaf hover:underline">Go back to tour list</a></p>
+</article>
+  <article id="customize" class="scroll-mt-6 border-t border-stone-200 py-14">
+    <h2 class="font-serif text-3xl font-semibold text-stone-900 md:text-4xl">Customized Tours</h2>
+    <p class="mt-1 text-sm font-semibold tracking-wide text-leaf uppercase">Minimum of 4 people per tour</p>
+    <div class="mt-5 max-w-3xl space-y-4 leading-relaxed">
+      <p>Discover the ultimate adventure with Sealand Expeditions' personalized tour. Traverse from the north to the south, exploring diverse landscapes. Experience the thrill of rappelling, the tranquility of kayaking, and the excitement of fishing. Dive into vibrant underwater worlds through snorkeling and scuba diving. Uncover ancient mysteries at Mayan temples and soar through the treetops on exhilarating zip lines. Tell us what's on your bucket list, and at SeaLand Expeditions we help you tick it off.</p>
+      <p>Tell us about your time frame! Only half a day? A week? We personalize your tour to ensure you have a blast! Belize is a small but wondrous country, with lots to do and lots to see!</p>
+      <p class="italic">We also cater for transportation to and from wherever you are staying (hotel, airport, Airbnb), with lunch and complimentary drinks, for an added fee.</p>
+    </div>
+    <a href="booking.html?tour=Customized%20Tour" class="mt-6 inline-block bg-river px-6 py-3 text-sm font-semibold tracking-wide text-white uppercase hover:bg-river-dark">Inquire today</a>
+  </article>
+</div>
+
+<section class="bg-leaf py-14"><div class="mx-auto grid max-w-6xl grid-cols-2 gap-4 px-5 lg:grid-cols-4">
+    <a href="tours.html" class="group relative block aspect-[3/4] overflow-hidden bg-jungle">
+      <img src="https://sealandexpeditions.com/wp-content/uploads/2023/11/tours-tubing.jpg" alt="" loading="lazy" class="h-full w-full object-cover opacity-70 transition group-hover:scale-105 group-hover:opacity-80">
+      <div class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/70 to-transparent p-5 text-center text-white">
+        <h3 class="font-serif text-2xl font-semibold">Our Tours</h3>
+        <span class="mt-2 inline-block text-sm tracking-wide uppercase underline">View now</span>
+      </div>
+    </a>
+    <a href="faq.html" class="group relative block aspect-[3/4] overflow-hidden bg-jungle">
+      <img src="https://sealandexpeditions.com/wp-content/uploads/2023/11/tours_cockscomb-santuary.jpg" alt="" loading="lazy" class="h-full w-full object-cover opacity-70 transition group-hover:scale-105 group-hover:opacity-80">
+      <div class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/70 to-transparent p-5 text-center text-white">
+        <h3 class="font-serif text-2xl font-semibold">FAQ</h3>
+        <span class="mt-2 inline-block text-sm tracking-wide uppercase underline">Learn more</span>
+      </div>
+    </a>
+    <a href="gallery.html" class="group relative block aspect-[3/4] overflow-hidden bg-jungle">
+      <img src="https://sealandexpeditions.com/wp-content/uploads/2023/11/tours_xunantunich.jpg" alt="" loading="lazy" class="h-full w-full object-cover opacity-70 transition group-hover:scale-105 group-hover:opacity-80">
+      <div class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/70 to-transparent p-5 text-center text-white">
+        <h3 class="font-serif text-2xl font-semibold">Gallery</h3>
+        <span class="mt-2 inline-block text-sm tracking-wide uppercase underline">View now</span>
+      </div>
+    </a>
+    <a href="contact.html" class="group relative block aspect-[3/4] overflow-hidden bg-jungle">
+      <img src="https://sealandexpeditions.com/wp-content/uploads/2023/11/tours_zoo.jpg" alt="" loading="lazy" class="h-full w-full object-cover opacity-70 transition group-hover:scale-105 group-hover:opacity-80">
+      <div class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/70 to-transparent p-5 text-center text-white">
+        <h3 class="font-serif text-2xl font-semibold">Inquire Today</h3>
+        <span class="mt-2 inline-block text-sm tracking-wide uppercase underline">Contact us</span>
+      </div>
+    </a>
+</div></section>
+
+<!-- Footer -->
+<footer class="bg-leaf text-white">
+  <div class="mx-auto grid max-w-6xl gap-10 px-5 py-14 md:grid-cols-4">
+    <div>
+      <img src="https://sealandexpeditions.com/wp-content/uploads/2023/11/sealand-expedition_logo-2x.png" alt="SeaLand Expeditions" class="h-16 w-auto">
+      <p class="mt-4 text-sm text-white/90">Explore our <a href="tours.html" class="underline">list of tours</a> or customize your own today!</p>
+      <a href="tel:+5016714571" class="mt-4 inline-block bg-jungle px-5 py-3 text-sm font-semibold tracking-wide uppercase hover:bg-jungle-deep">Call +501-671-4571</a>
+    </div>
+    <div>
+      <h2 class="font-serif text-xl font-semibold">Quick Links</h2>
+      <ul class="mt-4 space-y-2 text-sm">
+        <li><a href="index.html" class="hover:underline">Home</a></li>
+        <li><a href="about.html" class="hover:underline">About Us</a></li>
+        <li><a href="tours.html" class="hover:underline">Tours</a></li>
+        <li><a href="contact.html" class="hover:underline">Contact</a></li>
+      </ul>
+    </div>
+    <div>
+      <h2 class="font-serif text-xl font-semibold">Other Pages</h2>
+      <ul class="mt-4 space-y-2 text-sm">
+        <li><a href="booking.html" class="hover:underline">Booking</a></li>
+        <li><a href="gallery.html" class="hover:underline">Gallery</a></li>
+        <li><a href="faq.html" class="hover:underline">FAQ</a></li>
+      </ul>
+    </div>
+    <div>
+      <h2 class="font-serif text-xl font-semibold">Contact Info</h2>
+      <ul class="mt-4 space-y-2 text-sm">
+        <li>Belmopan City, Cayo, Belize</li>
+        <li><a href="tel:+5016714571" class="hover:underline">+501-671-4571</a></li>
+        <li><a href="mailto:sealandexpeditions@gmail.com" class="hover:underline">sealandexpeditions@gmail.com</a></li>
+        <li><a href="https://www.instagram.com/sealandexpeditions" class="hover:underline">@sealandexpeditions</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="border-t border-white/20 py-5 text-center text-sm text-white/90">Copyright &copy; <span id="year">2026</span> SeaLand Expeditions. All rights reserved.</div>
+</footer>
+
+<!-- WhatsApp chat button -->
+<a href="https://wa.me/5016714571" class="fixed right-4 bottom-4 z-50 rounded-full bg-[#25d366] px-5 py-3 text-sm font-bold text-white shadow-lg hover:brightness-95" aria-label="Chat with us on WhatsApp">WhatsApp Chat</a>
+
+<script>
+  document.getElementById('year').textContent = new Date().getFullYear();
+  var btn = document.getElementById('menu-btn'), menu = document.getElementById('mobile-menu');
+  btn.addEventListener('click', function () {
+    var open = menu.classList.toggle('hidden') === false;
+    btn.setAttribute('aria-expanded', open);
+  });
+</script>
+</body>
+</html>
