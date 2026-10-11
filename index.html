@@ -127,8 +127,15 @@ details[open] .chev { transform: rotate(180deg); }
     <p class="mt-4 text-sm italic">The Belize video is from the Travel Belize YouTube channel.</p>
     <a href="tours.html" class="mt-6 inline-block bg-leaf px-6 py-3 text-sm font-semibold tracking-wide text-white uppercase hover:bg-jungle">Get started</a>
   </div>
-  <div class="aspect-video w-full overflow-hidden bg-black md:col-span-3">
-    <iframe id="belize-video" class="h-full w-full" src="https://www.youtube.com/embed/3EgAK-fd318?enablejsapi=1&mute=1&playsinline=1&rel=0" title="Belize video from the Travel Belize YouTube channel" allow="autoplay; encrypted-media; picture-in-picture; fullscreen" allowfullscreen></iframe>
+  <div class="md:col-span-3">
+    <div class="aspect-video w-full overflow-hidden bg-black">
+      <iframe id="belize-video" class="pointer-events-none h-full w-full" src="https://www.youtube.com/embed/3EgAK-fd318?enablejsapi=1&mute=1&playsinline=1&rel=0&controls=0&modestbranding=1&iv_load_policy=3&disablekb=1" title="Belize video from the Travel Belize YouTube channel" allow="autoplay; encrypted-media; picture-in-picture" tabindex="-1"></iframe>
+    </div>
+    <div class="mt-3 flex flex-wrap items-center gap-2">
+      <button type="button" id="video-sound" class="border border-stone-300 px-4 py-2 text-sm font-semibold tracking-wide uppercase hover:border-leaf hover:text-leaf">Turn sound on</button>
+      <button type="button" id="video-play" class="border border-stone-300 px-4 py-2 text-sm font-semibold tracking-wide uppercase hover:border-leaf hover:text-leaf">Pause</button>
+      <a href="https://www.youtube.com/watch?v=3EgAK-fd318" target="_blank" rel="noopener" class="ml-auto text-sm font-semibold text-river underline">Watch on YouTube</a>
+    </div>
   </div>
 </section>
 
@@ -238,19 +245,43 @@ details[open] .chev { transform: rotate(180deg); }
 </script>
 <script>
   // Plays the Belize video (muted) when it scrolls into view and pauses it when it leaves.
-  // Visitors can unmute with the player's volume button.
+  // The video's own controls are hidden; the buttons under the video control sound and play/pause.
   (function () {
     var frame = document.getElementById('belize-video');
     if (!frame) return;
-    var player, ready = false, visible = false;
+    var soundBtn = document.getElementById('video-sound');
+    var playBtn = document.getElementById('video-play');
+    var player, ready = false, visible = false, userPaused = false;
     var reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    function labels() {
+      if (!ready) return;
+      soundBtn.textContent = player.isMuted() ? 'Turn sound on' : 'Turn sound off';
+      var s = player.getPlayerState();
+      playBtn.textContent = (s === 1 || s === 3) ? 'Pause' : 'Play';
+    }
     function sync() {
       if (!ready || reduceMotion) return;
-      if (visible) { player.playVideo(); } else { player.pauseVideo(); }
+      if (!visible) { player.pauseVideo(); } else if (!userPaused) { player.playVideo(); }
     }
     window.onYouTubeIframeAPIReady = function () {
-      player = new YT.Player('belize-video', { events: { onReady: function (e) { e.target.mute(); ready = true; sync(); } } });
+      player = new YT.Player('belize-video', { events: {
+        onReady: function (e) { e.target.mute(); ready = true; labels(); sync(); },
+        onStateChange: function (e) {
+          if (e.data === 0) { userPaused = true; player.seekTo(0, true); player.pauseVideo(); }
+          labels();
+        }
+      } });
     };
+    soundBtn.addEventListener('click', function () {
+      if (!ready) return;
+      if (player.isMuted()) { player.unMute(); } else { player.mute(); }
+      labels();
+    });
+    playBtn.addEventListener('click', function () {
+      if (!ready) return;
+      var s = player.getPlayerState();
+      if (s === 1 || s === 3) { userPaused = true; player.pauseVideo(); } else { userPaused = false; player.playVideo(); }
+    });
     var api = document.createElement('script');
     api.src = 'https://www.youtube.com/iframe_api';
     document.head.appendChild(api);
