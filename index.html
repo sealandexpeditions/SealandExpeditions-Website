@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Belize Tour Inquiries</title>
+    <!-- Tailwind CSS for modern, beautiful styling -->
+    <script src="https://jsdelivr.net"></script>
+</head>
+<body class="bg-stone-50 font-sans text-stone-800">
+
+    <!-- Hero Header -->
+    <header class="bg-teal-700 text-white py-12 text-center shadow-md">
+        <h1 class="text-4xl font-bold tracking-wide">Belize Adventure Tours</h1>
+        <p class="mt-2 text-teal-100 text-lg">Request your custom booking below</p>
+    </header>
+
+    <!-- Main Container -->
+    <main class="max-w-xl mx-auto my-12 px-6">
+        <div class="bg-white p-8 rounded-xl shadow-lg border border-stone-200">
+            <h2 class="text-2xl font-semibold text-stone-900 mb-2">Book Your Excursion</h2>
+            <p class="text-stone-600 text-sm mb-6">Fill out this quick form and our local team will email you back within 24 hours to confirm your dates.</p>
+
+            <!-- WEB3FORMS CONTACT FORM -->
+            <form action="https://web3forms.com" method="POST" class="space-y-5">
+                
+                <!-- REQUIRED: Your Web3Forms Access Key -->
+                <input type="hidden" name="access_key" value="d49e2d0f-ee16-4859-b8e2-337ad9957e73">
+                
+                <!-- OPTIONAL: Customizes the Subject Line of your notification emails -->
+                <input type="hidden" name="subject" value="New Belize Tour Booking Request!">
+                
+                <!-- HoneyPot Spam Protection (Hidden from real users) -->
+                <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
+
+                <!-- Guest Name -->
+                <div>
+                    <label class="block text-sm font-medium text-stone-700 mb-1">Full Name</label>
+                    <input type="text" name="name" required placeholder="John Doe" 
+                           class="w-full px-4 py-2 border border-stone-300 rounded-md focus:ring-2 focus:ring-teal-600 focus:outline-none">
+                </div>
+
+                <!-- Guest Email -->
+                <div>
+                    <label class="block text-sm font-medium text-stone-700 mb-1">Email Address</label>
+                    <input type="email" name="email" required placeholder="john@example.com" 
+                           class="w-full px-4 py-2 border border-stone-300 rounded-md focus:ring-2 focus:ring-teal-600 focus:outline-none">
+                </div>
+
+                <!-- Tour Selection Dropdown -->
+                <div>
+                    <label class="block text-sm font-medium text-stone-700 mb-1">Select Your Adventure</label>
+                    <select name="tour_type" required 
+                            class="w-full px-4 py-2 border border-stone-300 rounded-md focus:ring-2 focus:ring-teal-600 focus:outline-none bg-white">
+                        <option value="">-- Choose an Excursion --</option>
+                        <option value="ATM Cave">Actun Tunichil Muknal (ATM) Cave</option>
+                        <option value="Hol Chan Snorkeling">Hol Chan Marine Reserve Snorkeling</option>
+                        <option value="Xunantunich Ruins">Xunantunich Mayan Ruins</option>
+                        <option value="Cave Tubing Zipline">Jaguar Paw Cave Tubing & Zipline</option>
+                        <option value="Custom Itinerary">Custom / Multi-Day Itinerary</option>
+                    </select>
+                </div>
+
+                <!-- Travel Date -->
+                <div>
+                    <label class="block text-sm font-medium text-stone-700 mb-1">Preferred Tour Date</label>
+                    <input type="date" name="preferred_date" required 
+                           class="w-full px-4 py-2 border border-stone-300 rounded-md focus:ring-2 focus:ring-teal-600 focus:outline-none">
+                </div>
+
+                <!-- Number of Guests -->
+                <div>
+                    <label class="block text-sm font-medium text-stone-700 mb-1">Number of Travelers</label>
+                    <input type="number" name="guests_count" min="1" max="50" required placeholder="2" 
+                           class="w-full px-4 py-2 border border-stone-300 rounded-md focus:ring-2 focus:ring-teal-600 focus:outline-none">
+                </div>
+
+                <!-- Custom Notes -->
+                <div>
+                    <label class="block text-sm font-medium text-stone-700 mb-1">Special Requests or Questions</label>
+                    <textarea name="message" rows="4" placeholder="Let us know dietary restrictions, hotel pickup needs, or group adjustments..." 
+                              class="w-full px-4 py-2 border border-stone-300 rounded-md focus:ring-2 focus:ring-teal-600 focus:outline-none"></textarea>
+                </div>
+
+                <!-- Submit Button -->
+                <button type="submit" 
+                        class="w-full bg-teal-600 hover:bg-teal-700 text-white font-semibold py-3 px-4 rounded-md transition-colors shadow-md cursor-pointer">
+                    Submit Booking Inquiry
+                </button>
+
+            </form>
+        </div>
+    </main>
+
+</body>
+</html>
